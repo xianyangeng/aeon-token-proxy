@@ -11,7 +11,9 @@
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue)](https://python.org)
 [![Status](https://img.shields.io/badge/status-production-green)]()
-[![Stars](https://img.shields.io/github/stars/xianyangeng/aeon-token-proxy?style=social)]()
+[![Stars](https://img.shields.io/github/stars/xianyangeng/aeon-token-proxy?style=social)](https://github.com/xianyangeng/aeon-token-proxy)
+
+</div>
 
 ---
 
@@ -34,8 +36,6 @@ print(response.choices[0].message.content)
 [✨ 免费注册 →](https://你的域名/register) · [📖 帮助手册 →](HELP.md) · [💬 问题反馈 →](https://github.com/xianyangeng/aeon-token-proxy/issues)
 
 ---
-
-</div>
 
 ## 🌟 核心优势
 
