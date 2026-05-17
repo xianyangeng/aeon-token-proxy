@@ -151,6 +151,38 @@ client.chat('Hello').then(console.log);
 
 ---
 
+### 🦞 OpenClaw — AI 网关/Agent 平台
+- 将 Aeon 设为模型提供者，统一管理和计费
+- 支持 OpenAI 兼容接口，一行配置即可
+- 一键接入脚本：`./setup-aeon.sh <API_KEY> <服务器地址>`
+
+配置示例（openclaw.json）：
+```json
+{
+  "agents": {
+    "defaults": {
+      "model": {
+        "openaiBaseUrl": "https://your-server.com/v1",
+        "openaiApiKey": "opc-xxx"
+      }
+    }
+  }
+}
+```
+
+### 🤖 Hermes Agent — 智能 AI Agent 框架
+- 支持任意 OpenAI 兼容 API 作为后端
+- 配置环境变量即可接入 Aeon
+- 一键接入脚本：`./setup-aeon.sh <API_KEY> <服务器地址>`
+
+配置示例（~/.hermes/.env）：
+```env
+AI_GATEWAY_BASE_URL=https://your-server.com/v1
+AI_GATEWAY_API_KEY=opc-xxx
+```
+
+---
+
 ## 🦞 OpenClaw 接入
 
 将 Aeon 设为 OpenClaw 的模型提供者。
