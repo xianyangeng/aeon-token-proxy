@@ -1,0 +1,7 @@
+# Ignore everything except docs
+/*
+!/README.md
+!/HELP.md
+
+# But keep gitignore itself
+!.gitignore
