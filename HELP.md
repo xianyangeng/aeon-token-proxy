@@ -18,7 +18,7 @@ pip install openai
 from openai import OpenAI
 client = OpenAI(
     api_key=***
-    base_url="https://your-server.com/v1"
+    base_url="https://moreapi.uk/v1"
 )
 response = client.chat.completions.create(
     model="deepseek-chat",
@@ -63,7 +63,7 @@ import base64
 
 client = OpenAI(
     api_key=***
-    base_url="https://your-server.com/v1"
+    base_url="https://moreapi.uk/v1"
 )
 
 # 读取图片为 base64
@@ -95,7 +95,7 @@ print(response.choices[0].message.content)
 ### cURL 示例
 
 ```bash
-curl https://your-server.com/v1/chat/completions \
+curl https://moreapi.uk/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ***" \
   -d '{
@@ -125,7 +125,7 @@ curl https://your-server.com/v1/chat/completions \
 pip install opc-proxy
 
 from opc_proxy import OPCClient
-client = OPCClient(api_key="opc-xxx", base_url="https://your-server.com")
+client = OPCClient(api_key="opc-xxx", base_url="https://moreapi.uk")
 response = client.chat("Hello")
 print(response)
 ```
@@ -136,7 +136,7 @@ print(response)
 npm install @opc-proxy/client
 
 const OPC = require('@opc-proxy/client');
-const client = new OPC({ apiKey: 'opc-xxx', baseUrl: 'https://your-server.com' });
+const client = new OPC({ apiKey: 'opc-xxx', baseUrl: 'https://moreapi.uk' });
 client.chat('Hello').then(console.log);
 ```
 
@@ -162,7 +162,7 @@ client.chat('Hello').then(console.log);
   "agents": {
     "defaults": {
       "model": {
-        "openaiBaseUrl": "https://your-server.com/v1",
+        "openaiBaseUrl": "https://moreapi.uk/v1",
         "openaiApiKey": "opc-xxx"
       }
     }
@@ -177,7 +177,7 @@ client.chat('Hello').then(console.log);
 
 配置示例（~/.hermes/.env）：
 ```env
-AI_GATEWAY_BASE_URL=https://your-server.com/v1
+AI_GATEWAY_BASE_URL=https://moreapi.uk/v1
 AI_GATEWAY_API_KEY=opc-xxx
 ```
 
@@ -190,9 +190,9 @@ AI_GATEWAY_API_KEY=opc-xxx
 ### 一键接入
 
 ```bash
-curl -O https://your-server.com/sdks/setup-aeon.sh
+curl -O https://moreapi.uk/sdks/setup-aeon.sh
 chmod +x setup-aeon.sh
-./setup-aeon.sh <你的API_KEY> https://your-server.com
+./setup-aeon.sh <你的API_KEY> https://moreapi.uk
 ```
 
 ### 手动配置
@@ -204,7 +204,7 @@ chmod +x setup-aeon.sh
   "agents": {
     "defaults": {
       "model": {
-        "openaiBaseUrl": "https://your-server.com/v1",
+        "openaiBaseUrl": "https://moreapi.uk/v1",
         "openaiApiKey": "opc-xxx"
       }
     }
@@ -215,7 +215,7 @@ chmod +x setup-aeon.sh
 或通过命令行：
 
 ```bash
-openclaw config set agents.defaults.model.openaiBaseUrl "https://your-server.com/v1"
+openclaw config set agents.defaults.model.openaiBaseUrl "https://moreapi.uk/v1"
 openclaw config set agents.defaults.model.openaiApiKey "opc-xxx"
 openclaw gateway restart
 ```
@@ -227,9 +227,9 @@ openclaw gateway restart
 ### 一键接入
 
 ```bash
-curl -O https://your-server.com/sdks/setup-aeon.sh
+curl -O https://moreapi.uk/sdks/setup-aeon.sh
 chmod +x setup-aeon.sh
-./setup-aeon.sh <你的API_KEY> https://your-server.com
+./setup-aeon.sh <你的API_KEY> https://moreapi.uk
 ```
 
 ### 手动配置
@@ -237,14 +237,14 @@ chmod +x setup-aeon.sh
 在 `~/.hermes/.env` 或项目根目录 `.env` 中添加：
 
 ```env
-AI_GATEWAY_BASE_URL=https://your-server.com/v1
+AI_GATEWAY_BASE_URL=https://moreapi.uk/v1
 AI_GATEWAY_API_KEY=opc-xxx
 ```
 
 或通过环境变量：
 
 ```bash
-export AI_GATEWAY_BASE_URL=https://your-server.com/v1
+export AI_GATEWAY_BASE_URL=https://moreapi.uk/v1
 export AI_GATEWAY_API_KEY=opc-xxx
 hermes start
 ```

@@ -23,8 +23,8 @@
 pip install openai
 from openai import OpenAI
 client = OpenAI(
-    api_key="你的 API Key",                    # 注册后免费获取
-    base_url="https://你的服务器地址/v1"         # 香港节点，直连无需梯子
+    api_key="你的APIKey",                    # 注册后免费获取
+    base_url="https://moreapi.uk/v1"         # 香港节点，直连无需梯子
 )
 response = client.chat.completions.create(
     model="deepseek-chat",                    # 一行切换模型
@@ -33,7 +33,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-[✨ 免费注册 →](https://你的域名/register) · [📖 帮助手册 →](HELP.md) · [💬 问题反馈 →](https://github.com/xianyangeng/aeon-token-proxy/issues)
+[✨ 免费注册 →](https://moreapi.uk/register) · [📖 帮助手册 →](HELP.md) · [💬 问题反馈 →](https://github.com/xianyangeng/aeon-token-proxy/issues)
 
 ---
 
@@ -114,8 +114,8 @@ print(response.choices[0].message.content)
   "agents": {
     "defaults": {
       "model": {
-        "openaiBaseUrl": "https://你的服务器地址/v1",
-        "openaiApiKey": "你的 API Key"
+        "openaiBaseUrl": "https://moreapi.uk/v1",
+        "openaiApiKey": "你的APIKey"
       }
     }
   }
@@ -124,8 +124,8 @@ print(response.choices[0].message.content)
 
 或通过命令行：
 ```bash
-openclaw config set agents.defaults.model.openaiBaseUrl "https://你的服务器地址/v1"
-openclaw config set agents.defaults.model.openaiApiKey "你的 API Key"
+openclaw config set agents.defaults.model.openaiBaseUrl "https://moreapi.uk/v1"
+openclaw config set agents.defaults.model.openaiApiKey "你的APIKey"
 openclaw gateway restart
 ```
 </details>
@@ -135,8 +135,8 @@ openclaw gateway restart
 
 在 `~/.hermes/.env` 中添加：
 ```env
-AI_GATEWAY_BASE_URL=https://你的服务器地址/v1
-AI_GATEWAY_API_KEY=你的 API Key
+AI_GATEWAY_BASE_URL=https://moreapi.uk/v1
+AI_GATEWAY_API_KEY=你的APIKey
 ```
 </details>
 
@@ -144,7 +144,7 @@ AI_GATEWAY_API_KEY=你的 API Key
 <summary><b>📦 一键接入脚本</b> — 点击展开</summary>
 
 ```bash
-curl -O https://你的服务器地址/sdks/setup-aeon.sh
+curl -O https://moreapi.uk/sdks/setup-aeon.sh
 chmod +x setup-aeon.sh
 ./setup-aeon.sh <API_KEY> <服务器地址>
 ```
@@ -172,7 +172,7 @@ chmod +x setup-aeon.sh
 <tr>
 <td align="center">
 <b>🌐 官网</b><br>
-<a href="#">your-server.com</a>
+<a href="https://moreapi.uk">moreapi.uk</a>
 </td>
 <td align="center">
 <b>📧 邮箱</b><br>
@@ -193,7 +193,7 @@ chmod +x setup-aeon.sh
 
 你的支持是我们持续迭代的动力 ❤️
 
-[✨ 免费注册体验 →](https://你的域名/register) · [📖 查看完整帮助手册 →](HELP.md)
+[✨ 免费注册体验 →](https://moreapi.uk/register) · [📖 查看完整帮助手册 →](HELP.md)
 
 ---
 
