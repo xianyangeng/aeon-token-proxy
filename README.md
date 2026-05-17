@@ -176,7 +176,7 @@ chmod +x setup-aeon.sh
 </td>
 <td align="center">
 <b>📧 邮箱</b><br>
-<a href="mailto:support@opc-proxy.com">support@opc-proxy.com</a>
+<a href="mailto:support@moreapi.uk">support@moreapi.uk</a>
 </td>
 <td align="center">
 <b>💬 问题反馈</b><br>
