@@ -1,156 +1,202 @@
-# ⚡ OPC API Proxy — 一站式 AI API 代理平台
+<div align="center">
 
-[![GitHub Stars](https://img.shields.io/badge/dynamic/json?logo=github&label=Stars&query=%24.stargazers_count&url=https%3A%2F%2Fapi.github.com%2Frepos%2Fyour-username%2Fopc-api-proxy)](https://github.com/your-username/opc-api-proxy)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://python.org)
+# ⚡ Aeon Token 中转站
 
-> **一人公司即可运营的 AI API 代理转发平台**  
-> 聚合 OpenAI / DeepSeek / Claude / Gemini / Groq / Ollama，统一 OpenAI 兼容接口
+### 一站式 AI API 代理平台
 
----
+**聚合 OpenAI · DeepSeek · Claude · Gemini · Groq · Ollama**
 
-## ✨ 功能特性
+统一 OpenAI 兼容接口 · 按量计费 · 订阅套餐 · 安全防护 · SSE 流式
 
-### 🔌 多 Provider 聚合
-| Provider | 状态 | 模型 |
-|:--|:--:|:--|
-| OpenAI (GPT-4o/o3) | ✅ | `gpt-4o`, `gpt-4.1`, `o3`, `o4-mini` |
-| DeepSeek | ✅ | `deepseek-chat`, `deepseek-v4-flash`, `deepseek-reasoner` |
-| Anthropic Claude | ✅ | `claude-sonnet-4`, `claude-haiku-4` |
-| Google Gemini | ✅ | `gemini-2.5-pro`, `gemini-2.5-flash` |
-| Groq | ✅ | `groq-llama-4`, `groq-deepseek`, `groq-mixtral` |
-| Ollama (本地) | ✅ | `ollama-llama3`, `ollama-qwen`, `ollama-deepseek-r1` |
-
-### 🛡️ 安全防护
-- IP 级别限流（防 DDoS）
-- API Key 暴力破解防护
-- 单 Key 并发控制
-- SQL 注入检测
-- Prompt 注入检测
-- 请求体大小限制
-
-### 💰 计费系统
-- **按量付费** — 预充值，按 Token 扣费
-- **订阅套餐** — 月付/年付，含固定额度
-- **超量计费** — 额度用完后自动按量扣费
-- **推荐奖励** — 推荐好友注册，双方得奖励
-
-### 📊 管理后台
-- 实时用量统计
-- API Key 管理
-- 套餐配置（运营可修改）
-- 充值记录
-- 24h 请求分布图表
-
-### 🏪 客户门户
-- 注册/登录
-- 余额与用量查看
-- 在线充值
-- 推荐码系统
-- 帮助手册
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10+-blue)](https://python.org)
+[![Status](https://img.shields.io/badge/status-production-green)]()
+[![Stars](https://img.shields.io/github/stars/xianyangeng/aeon-token-proxy?style=social)]()
 
 ---
 
-## 🚀 快速部署
-
-### 前置要求
-- Python 3.10+
-- 香港/海外云服务器（可选，但推荐）
-
-### 一键部署
-
-```bash
-git clone https://github.com/your-username/opc-api-proxy.git
-cd opc-api-proxy
-python3 -m venv venv
-source venv/bin/activate
-pip install fastapi uvicorn httpx python-dotenv sqlalchemy aiosqlite python-multipart
-
-# 配置 API Key
-cp .env.example .env
-# 编辑 .env 填入你的 OpenAI / DeepSeek / Claude / Gemini / Groq Key
-
-# 启动所有服务
-python main.py
-```
-
-### 服务地址
-
-| 服务 | 地址 | 说明 |
-|:--|:--|:--|
-| **代理接口** | `http://localhost:8787/v1/chat/completions` | OpenAI 兼容 |
-| **管理后台** | `http://localhost:8788/admin/login` | 运营管理 |
-| **客户门户** | `http://localhost:8789` | 用户自助 |
-| **健康检查** | `http://localhost:8787/v1/health` | 监控 |
-
----
-
-## 📦 客户端使用
+### 🚀 30 秒接入
 
 ```python
-# pip install openai
+pip install openai
 from openai import OpenAI
-
 client = OpenAI(
-    api_key="opc-xxx",                    # 注册后获取
-    base_url="https://your-server.com/v1"  # 替换为你的服务器地址
+    api_key="你的 API Key",                    # 注册后免费获取
+    base_url="https://你的服务器地址/v1"         # 香港节点，直连无需梯子
 )
-
-# 一行切换模型
 response = client.chat.completions.create(
-    model="deepseek-chat",   # 或 gpt-4o / claude-sonnet-4 / gemini-2.5-flash
-    messages=[{"role": "user", "content": "Hello"}]
+    model="deepseek-chat",                    # 一行切换模型
+    messages=[{"role": "user", "content": "你好"}]
 )
 print(response.choices[0].message.content)
 ```
 
+[✨ 免费注册 →](https://你的域名/register) · [📖 帮助手册 →](HELP.md) · [💬 问题反馈 →](https://github.com/xianyangeng/aeon-token-proxy/issues)
+
 ---
 
-## 🧩 项目结构
+</div>
 
+## 🌟 核心优势
+
+<table>
+<tr>
+<td width="33%">
+<h3>🔌 零改造接入</h3>
+<p>完全兼容 OpenAI SDK，只需改一行 <code>base_url</code>。<br>Python、Node.js、Java、Go… 任何语言即接即用。</p>
+</td>
+<td width="33%">
+<h3>💰 极致性价比</h3>
+<p>DeepSeek 低至 ¥0.14/百万 Token，<br>比直连官方还便宜，不需要为每个 Provider 充值。</p>
+</td>
+<td width="33%">
+<h3>🛡️ 企业级安全</h3>
+<p>IP 限流 · Key 防爆破 · 并发控制 · SQL/注入检测<br>香港节点直连，无需科学上网。</p>
+</td>
+</tr>
+<tr>
+<td>
+<h3>🎯 多模型聚合</h3>
+<p>一个接口调用所有主流模型：<br>GPT-4o · Claude · DeepSeek · Gemini · Groq</p>
+</td>
+<td>
+<h3>📊 实时用量</h3>
+<p>仪表盘实时看余额/消耗/请求量。<br>每个 Token 花在哪里，一目了然。</p>
+</td>
+<td>
+<h3>⚡ SSE 流式</h3>
+<p>完整的流式推流支持，<br>逐 Token 输出，和直连体验完全一致。</p>
+</td>
+</tr>
+</table>
+
+---
+
+## 🤖 支持模型（持续更新中）
+
+| 模型 | 供应商 | 输入 ¥/1K Tokens | 输出 ¥/1K Tokens |
+|---|---|---|---|
+| `deepseek-chat` | DeepSeek 🟢 | ¥0.00014 | ¥0.00028 |
+| `deepseek-v4-flash` | DeepSeek 🟢 | ¥0.00014 | ¥0.00028 |
+| `deepseek-reasoner` | DeepSeek 🟢 | ¥0.00014 | ¥0.00028 |
+| `gemini-2.5-flash` | Gemini 🟢 | ¥0.001 | ¥0.004 |
+| `groq-llama-4` | Groq 🟢 | ¥0.0003 | ¥0.0003 |
+| `gpt-4o-mini` | OpenAI | ¥0.0015 | ¥0.006 |
+| `gpt-4o` | OpenAI | ¥0.015 | ¥0.060 |
+| `claude-sonnet-4` | Anthropic | ¥0.015 | ¥0.075 |
+| `ocl3` | OpenAI | ¥0.050 | ¥0.200 |
+
+> 📌 性价比之王：**DeepSeek** 系列 + **Gemini Flash** · 复杂任务：**GPT-4o** + **Claude**
+
+---
+
+## 💎 定价方案
+
+| 套餐 | 月费 | Token 额度 | 适用人群 |
+|---|---|---|---|
+| 🥉 **入门版** | **¥99** | 5,000万 | 个人开发者，DeepSeek + Gemini + Groq |
+| 🥈 **标准版** | **¥299** | 2亿 | 小团队，解锁全部模型 |
+| 🥇 **专业版** | **¥999** | 10亿 | 企业级，高并发 + 优先线路 |
+| 🎯 **企业版** | 定制 | 100亿+ | 私有部署 · SLA 保障 · 定制路由 |
+
+### 🎁 推荐奖励
+> 每推荐一位好友注册并充值，**你和好友各得 ¥10**！推荐码在仪表盘查看。
+
+---
+
+## 🔌 客户端接入
+
+<details>
+<summary><b>🦞 OpenClaw 用户</b> — 点击展开</summary>
+
+```json
+{
+  "agents": {
+    "defaults": {
+      "model": {
+        "openaiBaseUrl": "https://你的服务器地址/v1",
+        "openaiApiKey": "你的 API Key"
+      }
+    }
+  }
+}
 ```
-opc-api-proxy/
-├── proxy/
-│   ├── server.py        # 代理服务器 (FastAPI)
-│   ├── router.py        # 模型路由 & 转发
-│   ├── auth.py          # API Key 认证 / 限流 / 计费 / 缓存
-│   ├── security.py      # 安全中间件
-│   ├── models.py        # 数据库模型
-│   └── database.py      # 数据库初始化
-├── admin/
-│   └── dashboard.py     # 管理后台
-├── portal/
-│   └── app.py           # 客户门户
-├── config/
-│   └── settings.py      # 全局配置
-├── sdks/
-│   ├── python/          # Python 客户端 SDK
-│   └── node/            # Node.js 客户端 SDK
-├── main.py              # 一键启动入口
-└── deploy.sh            # 境外服务器部署脚本
+
+或通过命令行：
+```bash
+openclaw config set agents.defaults.model.openaiBaseUrl "https://你的服务器地址/v1"
+openclaw config set agents.defaults.model.openaiApiKey "你的 API Key"
+openclaw gateway restart
 ```
+</details>
+
+<details>
+<summary><b>🤖 Hermes Agent 用户</b> — 点击展开</summary>
+
+在 `~/.hermes/.env` 中添加：
+```env
+AI_GATEWAY_BASE_URL=https://你的服务器地址/v1
+AI_GATEWAY_API_KEY=你的 API Key
+```
+</details>
+
+<details>
+<summary><b>📦 一键接入脚本</b> — 点击展开</summary>
+
+```bash
+curl -O https://你的服务器地址/sdks/setup-aeon.sh
+chmod +x setup-aeon.sh
+./setup-aeon.sh <API_KEY> <服务器地址>
+```
+自动检测 OpenClaw / Hermes 环境，一键配置。
+</details>
 
 ---
 
-## 📊 定价参考
+## 🏗️ 为什么选择 Aeon Token？
 
-| 套餐 | 月费 | Token 额度 | 适用模型 |
-|:--|:--:|:--:|:--|
-| 🥉 入门版 | ¥99 | 5,000万 | DeepSeek + Gemini Flash + Groq |
-| 🥈 标准版 | ¥299 | 2亿 | 全部模型（GPT-4o/Claude） |
-| 🥇 专业版 | ¥999 | 10亿 | 全部模型 + 高并发 |
-| 🎯 企业版 | 定制 | 100亿 | 全部 + 私有部署 |
+| 对比项 | 直连官方 | Aeon Token 中转站 |
+|---|---|---|
+| Key 管理 | 每个 Provider 一个 Key | **一个 Key 管理所有** |
+| 计费 | 多账户多账单 | **统一余额 + 自动扣费** |
+| 网络 | 需要科学上网 | **香港节点直连** |
+| 团队协作 | 共享 Key 不便 | **独立子 Key + 用量监控** |
+| 安全防护 | 需自建 | **限流/防爆破/注入检测 内置** |
+| 订阅套餐 | ❌ | **月付/年付省更多** |
 
 ---
 
-## 🤝 贡献
+## 📞 联系我们
 
-欢迎提交 Issue 和 PR！一起建设最好的开源 AI API 代理平台。
+<table>
+<tr>
+<td align="center">
+<b>🌐 官网</b><br>
+<a href="#">your-server.com</a>
+</td>
+<td align="center">
+<b>📧 邮箱</b><br>
+<a href="mailto:support@opc-proxy.com">support@opc-proxy.com</a>
+</td>
+<td align="center">
+<b>💬 问题反馈</b><br>
+<a href="https://github.com/xianyangeng/aeon-token-proxy/issues">GitHub Issues</a>
+</td>
+</tr>
+</table>
 
-## 📄 License
+---
 
-MIT License
+<div align="center">
 
-## ⭐ Star History
+### ⭐ 觉得有用？给我们一个 Star！
 
-如果你觉得这个项目有帮助，请给我们一个 Star ⭐，让更多人看到！
+你的支持是我们持续迭代的动力 ❤️
+
+[✨ 免费注册体验 →](https://你的域名/register) · [📖 查看完整帮助手册 →](HELP.md)
+
+---
+
+**墨菲 OPC · 一个人就是一支队伍**
+
+</div>
